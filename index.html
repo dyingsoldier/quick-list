@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/index.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Lista de Compras</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="assets/images/Vector.png" alt="" />
+      <span>quicklist</span>
+    </header>
+
+    <div class="container">
+      <div class="intro">
+        <a href="#">
+          <img src="assets/icons/link-button.svg" alt="" />
+        </a>
+        <h1>Compras da semana</h1>
+      </div>
+
+      <form class="item">
+        <input type="text" placeholder="Adicione um novo item" 
+        name="items" id="item"/>
+        <button type="submit" id="button">Adicionar item</button>
+      </form>
+
+      <div class="list">
+        <ul>
+          <li class="liStyle">
+            <input type="checkbox" id="checkbox">
+            <span id="itemBuy">Pão de forma</span>
+            <button class="btn-delete">
+              <img src="assets/icons/trash.svg" alt="">
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="alert">
+        <img src="assets/icons/warning.svg" alt="">
+        <span>O item foi removido da lista</span>
+        <button class="btn-delete" id="removeAlert">
+          <img src="assets/icons/delete.svg" alt="">
+        </button>
+      </div> 
+
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
