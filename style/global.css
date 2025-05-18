@@ -56,3 +56,14 @@ html{
   margin-inline: auto; 
 }
 
+.none{
+  display: none;
+}
+
+.initial{
+  display: initial;
+}
+
+.hidden{
+  display: none;
+}
