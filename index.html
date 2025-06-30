@@ -37,22 +37,28 @@
           name="items"
           id="inputItem"
         />
-        <button type="submit" id="button">Adicionar item</button>
+        <input type="button" value="Adicionar item" id="button" />
       </form>
 
       <div class="list">
-        <ul id="ul"></ul>
+        <ul id="ul">
+          <!-- <li class="liStyle">
+            <input type="checkbox" id="checkbox" />
+            <span id="itemBuy">Pão de forma</span>
+            <button>
+              <img class="btn-delete" src="assets/icons/trash.svg" alt=""/>
+            </button>
+          </li> -->
+        </ul>
       </div>
 
-      <div class="hidden">
-        <div class="liStyle">
-          <div class="alert">
+      <div id="deletedContent">
+        <div class="liStyle alert">
             <img src="assets/icons/warning.svg" alt="" />
             <span>O item foi removido da lista</span>
-            <button class="btn-delete" id="removeAlert">
-              <img src="assets/icons/delete.svg" alt="" />
+            <button>
+              <img id="delete-button" class="btn-delete" src="assets/icons/delete.svg" alt="" />
             </button>
-          </div>
         </div>
       </div>
     </div>

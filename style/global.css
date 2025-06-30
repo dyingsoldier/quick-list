@@ -56,14 +56,6 @@ html{
   margin-inline: auto; 
 }
 
-.none{
-  display: none;
-}
-
-.initial{
-  display: initial;
-}
-
-.hidden{
+#deletedContent{
   display: none;
 }

@@ -1,34 +1,53 @@
-const inputItem = document.getElementById("inputItem")
+const item = document.getElementById("inputItem")
 const button = document.getElementById("button")
+
 const ul = document.getElementById("ul")
 
-const inputCheckBox = document.getElementById("checkbox")
-const buttonDelete = document.getElementsByClassName("btn-delete")
+const deleted = document.getElementById("deletedContent")
 
 button.addEventListener("click", function addItem(e) {
   e.preventDefault()
-  const li = document.createElement("li")
-  li.classList.add("liStyle")
+  try {
+    const itemList = document.createElement("li")
+    itemList.classList.add("liStyle")
 
-  const imageDelete = document.createElement("img")
-  imageDelete.src = "assets/icons/trash.svg"
+    const checkbox = document.createElement("input")
+    checkbox.setAttribute("type", "checkbox")
 
-  const btnDelete = document.createElement("button")
-  btnDelete.classList.add("btn-delete")
-  btnDelete.appendChild(imageDelete)
+    const nameItem = document.createElement("span")
+    nameItem.textContent = item.value
 
-  const checkbox = document.createElement("input")
-  checkbox.type = "checkbox"
+    const buttonDelete = document.createElement("button")
 
-  const span = document.createElement("span")
-  span.textContent = inputItem.value
+    const imageDelete = document.createElement("img")
+    imageDelete.classList.add("btn-delete")
+    imageDelete.setAttribute("src", "assets/icons/trash.svg")
 
-  ul.appendChild(li)
-  li.append(checkbox, span, btnDelete)
+    ul.append(itemList)
+    itemList.append(checkbox, nameItem, buttonDelete)
+    buttonDelete.append(imageDelete)
 
-  clearForm()
+    cleanForm()
+    item.focus()
+  } catch (error) {
+    console.log(error)
+  }
 })
 
-function clearForm() {
-  inputItem.value = ""
+function cleanForm() {
+  item.value = ""
 }
+
+ul.addEventListener("click", function (e) {
+  if (e.target.classList.contains("btn-delete")) {
+    console.log("teste")
+
+    const item = e.target.closest(".liStyle")
+    item.remove()
+
+    deletedContent.style.display = "block"
+    setTimeout(() => {
+      deletedContent.style.display = "none"
+    }, 3000)
+  }
+})

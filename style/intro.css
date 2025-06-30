@@ -40,7 +40,7 @@
     border-color: var(--color-brand);
   }
 
-  button {
+  input[type=button] {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
     transition: scale 500ms;
   }
 
-  button:hover {
+  input[type = button]:hover {
     scale: 1.03;
     background-color: var(--color-brand-hover);
   }
@@ -70,7 +70,7 @@
     flex-direction: column;
     width: 20.375rem;
 
-    button{
+    input[type = button]{
       width: 20.375rem;
     }
   }
