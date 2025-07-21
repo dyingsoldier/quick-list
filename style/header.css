@@ -3,14 +3,14 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: 1.5625rem;
-  gap: .5rem;
+  gap: 0.5rem;
 
-  img{
+  img {
     width: 30px;
     height: 23px;
   }
 
-  span{
+  span {
     font: var(--fw-bold) var(--fs-26) var(--ff-sora);
   }
 }

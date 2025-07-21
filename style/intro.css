@@ -21,6 +21,8 @@
   display: flex;
   gap: 1rem;
 
+  margin-bottom: 1.5rem;
+
   input {
     width: 28.1875rem;
     max-width: 100%;
@@ -40,7 +42,7 @@
     border-color: var(--color-brand);
   }
 
-  input[type=button] {
+  button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,20 +61,23 @@
     transition: scale 500ms;
   }
 
-  input[type = button]:hover {
+  button:hover {
     scale: 1.03;
     background-color: var(--color-brand-hover);
   }
 }
 
-@media (max-width: 28.125rem) {
+@media (max-width: 33.75rem) {
   .item {
     flex-direction: column;
     width: 20.375rem;
 
-    input[type = button]{
+    button {
       width: 20.375rem;
     }
   }
+  .intro {
+    margin-inline: auto;
+    padding: auto;
   }
-
+}

@@ -3,15 +3,6 @@ li {
   list-style: none;
 }
 
-.list {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  width: 40rem;
-  margin-top: 2.5rem;
-}
-
 li {
   background-color: white;
   width: 22rem;
@@ -19,6 +10,10 @@ li {
   padding: 0.5rem 0.75rem;
 
   font: var(--fw-medium) var(--fs-16) var(--ff-inter);
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .liStyle {
@@ -30,25 +25,26 @@ li {
   margin-bottom: 0.75rem;
   gap: 0.75rem;
 
+  .btn-delete {
+    width: 1rem;
+    height: 1rem;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    transition: all 300ms ease-in-out;
+  }
+
   span {
     color: var(--content-secondary);
     margin-right: auto;
   }
 
-  button{
+  button {
     appearance: none;
     border: none;
     background-color: transparent;
-  }
-
-  #deletedContent > .alert > .btn-delete {
-    width: .25rem;
-    height: .25rem;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-
-    transition: scale 500ms, transform 500ms;
   }
 
   .btn-delete:hover {
@@ -82,37 +78,63 @@ input[type="checkbox"]:checked::after {
   color: var(--color-brand);
 }
 
-.alert {
-  width: 40rem;
+.alert,
+#alert-zap {
+  width: 39.1875rem;
   height: 2.75rem;
 
   background-color: var(--color-danger);
   border-radius: 0.75rem;
   padding: 0.75rem;
 
-  margin-top: 2.25rem;
+  margin-top: 1rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
 
-  span {
-    margin-right: auto;
-    font: var(--fw-semibold) var(--fs-16) var(--ff-inter);
-    color: var(--always-white);
+  img {
+    width: 1rem;
+    height: 1rem;
   }
-  .btn-delete {
-    width: 1.25rem;
-    height: 1.25rem;
 
+  button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  .btn-delete {
+    width: 0.875rem;
+    height: 0.875rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
+
+    transition: all 300ms ease-in-out;
+  }
+
+  .btn-delete:hover {
+    scale: 1.1;
+    transform: rotate(10deg);
+  }
+
+  span {
+    margin-right: auto;
+    font: var(--fw-semibold) var(--fs-16) var(--ff-inter);
+    line-height: 20px;
+
+    color: var(--always-white);
   }
 }
 
-@media (max-width: 28.125rem) {
+#alert-zap {
+  background-color: green;
+  /* display: none; */
+}
+
+@media (max-width: 33.75rem) {
   li {
     width: 20.4375rem;
     max-width: 100%;
@@ -122,7 +144,8 @@ input[type="checkbox"]:checked::after {
     width: 20.4375rem;
   }
 
-  .alert {
+  .alert,
+  .alert-zap {
     width: 20.4375rem;
   }
 }
